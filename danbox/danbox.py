@@ -35,7 +35,7 @@ def create_features(df, label=None):
     df['year'] = df['date'].dt.year
     df['dayofyear'] = df['date'].dt.dayofyear
     df['dayofmonth'] = df['date'].dt.day
-    df['weekofyear'] = df['date'].dt.isocalendar().weekofyear
+    df['weekofyear'] = df['date'].dt.weekofyear
     df['date_offset'] = (df.date.dt.month*100 + df.date.dt.day - 320)%1300
 
     # Create a new column 'season' based on the 'date_offset' column
